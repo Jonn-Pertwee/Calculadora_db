@@ -1,0 +1,135 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Calculator
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string v = textBox1.Text;
+            
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            string w = textBox2.Text;
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            string x = textBox3.Text;
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            string y = textBox4.Text;
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            string z = textBox5.Text;
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //string v = textBox1.Text;
+            //string w = textBox2.Text;
+            string x = textBox3.Text;
+            //string y = textBox4.Text;
+            //string z = textBox5.Text;
+            //string k = textBox6.Text;
+            string d0 = textBox10.Text;
+            
+            string l = textBox7.Text;
+            //string m = textBox8.Text;
+            string n = textBox9.Text;
+            // var a = v;
+            // var b = Convert.ToString(a);
+            // textBox6.Text = (b);
+            //var a = Convert.ToDouble(v);
+            //var b = Convert.ToDouble(w);
+            var c = Convert.ToDouble(x);
+            //var d = Convert.ToDouble(y);
+            //var f = Convert.ToDouble(z);
+            //var g = Convert.ToDouble(k);
+            var h = Convert.ToDouble(l);
+            //var i = Convert.ToDouble(m);
+            var j = Convert.ToDouble(n);
+            var dzero = Convert.ToDouble(d0);
+            var log = Math.Log(c,10);
+            var dbm = (10 * log)+30;
+            var dbw = dbm - 30;
+            textBox1.Text = Convert.ToString(dbm);
+            textBox2.Text = Convert.ToString(dbw);
+            var mW = Math.Pow(c, 3);
+            var p1 = Math.Pow(10, 6);
+            var p = (h * p1);
+            var velluz = Math.Pow(10, 8);
+            var componda = ((3 * velluz) / p);
+           
+                
+            var compt = Convert.ToString(componda);
+            textBox8.Text = (compt);
+           
+            
+            //FRIIS
+            
+            var compqua = Math.Pow(componda, 2);
+            var uno = (c * compqua);
+            var khan = (12.566368 * j);
+            var duo = Math.Pow(khan, 2);
+            var Pr = (uno / duo);
+            var Prt = Convert.ToString(Pr);
+            textBox10.Text = (Prt);
+            var Adbu = (Pr / c);
+            var adb = Math.Log(Adbu,10);
+            var dezadb = 10 * adb;
+            var ate = Convert.ToString(dezadb);
+            textBox4.Text = (ate);
+            var dbmR = (10 * (Math.Log10(Pr))) + 30;
+            var dbwR = dbmR - 30;
+            textBox5.Text = Convert.ToString(dbmR);
+            textBox6.Text = Convert.ToString(dbwR);
+
+            //Franchhoff
+            var khan2 = (12.566368*dzero);
+            var khan3 = Math.Pow(khan2, 2)
+            var tres = (uno / tres);
+            var two = Math.Pow((dzero/j), 2);
+            var final = (tres*two);
+            textBox11.Text= Convert.ToString(final);
+            
+
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
